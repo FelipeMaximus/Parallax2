@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap">
+</head>
+<body>
+
+    <section>
+        <img src="img/floresta.jpg" alt="" id="floresta">
+        <img src="img/montanha.png" alt="" id="montanha">
+        <h1 id="texto">Parallax</h1>
+    </section>
+
+    <div  class="texto-2">
+        <div class="primeiro">
+            <h2>Imagens</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aliquam maiores assumenda voluptatibus cumque. <br> A qui tempora vitae facere cum rem tempore, expedita dolores aperiam, in nisi repellat ipsum perspiciatis.</p>
+        </div>
+
+        <div class="container">
+
+            <div class="box box1">
+                <div class="in">
+                    <p>Gostei</p>
+                </div>
+            </div>
+
+            <div class="box box2">
+                <div class="in">
+                    <p>Comente</p>
+                </div>
+            </div>
+
+            <div class="box box3">
+                <div class="in">
+                    <p>Compartilhe</p>
+                </div>
+            </div>
+
+            <div class="box box4">
+                <div class="in">
+                    <p>Inscreva-se</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rodape">
+            <p>© 2021. Site com design feito por Filypy Maycon.</p>
+        </div>
+    </div>
+
+    <script>
+        let floresta = document.getElementById("floresta");
+        let montanha = document.getElementById("montanha");
+        let texto = document.getElementById("texto");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            floresta.style.top= value * 0.7 + 'px';
+            montanha.style.bottom= value * 0.5 + 'px';
+            texto.style.top= value * 1 + 'px';
+
+        })
+    </script>
+    
+</body>
+</html>
